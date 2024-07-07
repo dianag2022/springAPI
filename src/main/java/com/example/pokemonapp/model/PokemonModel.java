@@ -3,9 +3,9 @@ package com.example.pokemonapp.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Pokemon {
+public class PokemonModel {
     private String name;
-    private Integer id;
+    private String url;
 
     // Getters y setters
     public String getName() {
@@ -16,11 +16,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public String getUrl() {
+        return this.url;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

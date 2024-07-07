@@ -6,14 +6,14 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PokemonResponse {
-    private List<Pokemon> results;
+    private List<PokemonModel> results;
 
-    // Getters y setters
-    public List<Pokemon> getResults() {
+    // Getters and setters
+    public List<PokemonModel> getResults() {
         return results;
     }
 
-    public void setResults(List<Pokemon> results) {
+    public void setResults(List<PokemonModel> results) {
         this.results = results;
     }
 }

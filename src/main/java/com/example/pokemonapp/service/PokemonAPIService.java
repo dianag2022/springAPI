@@ -1,6 +1,6 @@
 package com.example.pokemonapp.service;
 
-import com.example.pokemonapp.model.Pokemon;
+import com.example.pokemonapp.model.PokemonModel;
 import com.example.pokemonapp.model.PokemonResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class PokemonAPIService {
         return instance;
     }
 
-    public List<Pokemon> getPokemons(int offset, int limit) {
+    public List<PokemonModel> getPokemons(int offset, int limit) {
         String url = POKE_API_URL + "?offset=" + offset + "&limit=" + limit;
         ResponseEntity<PokemonResponse> response = restTemplate.getForEntity(url, PokemonResponse.class);
         return response.getBody().getResults();
